@@ -60,7 +60,7 @@
             canvas2.removeEventListener('mouseup', remove);
             canvas2.removeEventListener('mousemove', scale);
         };
-        if (cX + radius + 10 >= mouseX && cX + radius - 10 <= mouseX) {
+        if ((cX + radius + 10 >= mouseX && cX + radius - 10 <= mouseX) || (cX - radius + 10 >= mouseX && cX - radius - 10 <= mouseX)) {
             canvas2.addEventListener('mousemove', scale);
             canvas2.addEventListener('mouseup', remove);
         } else {
